@@ -1,41 +1,13 @@
-index.js 
-
-// Code Analysis //
-
-The code provided is written using syntactically correct JavaScript, using the React JavaScript library for front-end development. 
-The code is passing data from the parent component to the child component, ProductItem, and renders ProductItem accordingly. 
-The code also uses axios to fetch data to the getServerSideProps async fetch request and sets the props of the product as the response of this fetch. 
-The code also uses the useContext hook to fetch and update state that is managed globally, such as an array of items in the cart. 
-It uses try/catch error handling, such as catching errors when the desired product is out of stock, and the code looks well structured and labeled. 
-
-//Errors//
-
-No errors were found in the code provided. 
-
-// Security Vulnerabilities //
-
-No security vulnerabilities have been found in this code. The code does not interact with a database directly so there are no SQL injection vulnerabilities. Inputs, such as the product number, are all read-only which prevents XSS injections. Other potential security risks, such as Cross-Origin Resource Sharing (CORS), have been prevented by using an API key.login.js 
+***** CheckoutWizard.js ***** 
 
 Cumulative Report:
-This code provides the layout for a login page. It is written in React and contains HTML code from Next.js. The code includes the useForm method from react-hook-form and Next-Auth for session authentication. It also includes the useEffect and useRouter methods from Next.js, as well as the react-toastify and getError methods from @/utils/error. The code also contains links to sign in or register. 
+This code serves as a checkout wizard for an online store, for users to easily navigate through the process. It uses the React library to render an interactive UI that is easy to use. The code contains four steps which get highlighted depending on the progress of the checkout process.
 
 Code Analysis:
-This code is written in a clear and efficient manner. All necessary libraries and methods have been imported and used as needed, and all variables and functions have been declared and utilized properly. The code is properly commented and follows best practices.
+The code is simply importing the 'react' library, followed by a function in which a list of four steps is created while mapping a JavaScript array. The structure of the code is easy to understand and well written, utilizing React components and properly optimized variables. 
 
 Errors:
-There are no errors in this code.
+This code contains no syntax errors, however code can contain logical errors which can occur during the usage of the checkout wizard. Therefore any display or functional errors must be identified in order to provide the best experience to the user.
 
 Security Vulnerabilities:
-There is a potential security vulnerability in this code. The useForm function imported from react-hook-form does not have any security alterations or modifications. This could leave the code open to dangerous attacks or manipulation. It is recommended that additional measures be taken to ensure the security of the code.setupSocket.ts 
-
-//CUMULATIVE REPORT:
-The code above is a class that handles all the socket communications for a real-time application.  It sets up a Server object that listens for connections, and then begins an "on connection" logic that responds appropriately to events like disconnects, reconnects, etc.  Additionally, it handles information related to a bidding system such as the highest bid and bid status.  Lastly, the class includes helper functions that handle updates to the dynamic auction item and other data related to the application.
-
-//CODE ANALYSIS:
-The code provided is easy to read and understand, and has ample comments to explain the purpose of each individual line.  The code does separate business logic from the socket logic, and each of the socket events is wrapped in its own function for easier maintenance and debugging.  The code uses clearTimeout for effective memory management and also contains ample error logging for obtaining feedback on the app's performance. 
-
-//ERRORS:
-No errors were found in the code provided.
-
-//SECURITY VULNERABILITIES:
-The code does not include any security-related measures, such as authentication or data encryption.  Furthermore, this code allows incoming connections from an unknown origin, making the application prone to attack. Additionally, the application does not have a way of validating user input, leaving it open to potential malicious attacks.
+This code does not contain any vulnerabilities, however additional access controls must be implemented to ensure that users are authenticated and authorized before accessing the checkout wizard. Additionally, input validation should be implemented to protect against any malicious code injections.
