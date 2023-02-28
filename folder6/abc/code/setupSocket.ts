@@ -7,7 +7,7 @@ let timerFunc = setTimeout(function(){
 },20000);
 let highestBid: number = 0;
 let highestBidder: string = "";
-let highestBidderSID: string = "";
+let highestBidrSID: string = "";
 
 class SetupSocket {
   private io: Server;
