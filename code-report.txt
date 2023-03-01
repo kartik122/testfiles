@@ -1,249 +1,826 @@
 
-******** CheckoutWizard.js ******** 
+******** Assessment3Application.java ******** 
 
-Code Analysis: 
-The code uses a functional component, which takes in an activeStep parameter as a prop. It uses a map function to iterate over an array containing steps in a checkout wizard, and returns a div element for each step. Depending on which step is active, the div element will have different styling.
+Code Report:
+This code is a simple Spring Boot application that runs the Assessment3Application class when the main method is called. This application does not perform any actual work, but instead serves as a starting point for a larger application.
+
+Code Analysis:
+The code is clean and well-written and follows the conventions of the Spring Boot framework. The code does not contain any errors, however there are a few best practices that should be followed. The package name should not contain the word "assessment" as that can be mistaken as a specific application.
 
 Errors:
-None
+There are no errors in the code.
 
 Security Vulnerabilities:
-None
+No security vulnerabilities have been detected in this code.
 
 Suggested Code Corrections:
-None
+The package name should be changed to reflect the purpose of the application. The application should also be extended to provide useful functionality.
+
+******** Customer.java ******** 
+
+CODE REPORT:
+This code package provides a Java class with attributes for representing a customer object in a program. The class includes variables for an “ID”, a “Customer Name”, an “email” address, and a “date of birth”. The class also includes Lombok annotations for performing getters, setters, and constructors automatically. 
+
+CODE ANALYSIS:
+This code package is well written and can be easily used as a Java Entity to represent a customer in a system. Additionally, the Lombok annotations increase the utility and readability of the code by providing actions for setting and getting variables automatically. 
+
+ERRORS:
+No errors were found in the code package. 
+
+SECURITY VULNERABILITIES:
+No security vulnerabilities were found in the code package.
+
+SUGGESTED CODE CORRECTIONS:
+No code corrections are necessary for this code package.
+
+******** Name.java ******** 
+
+Code Report:
+This code package is a simple Java bean file containing a Name class with two fields: firstName and lastName. It uses Data, AllArgsConstructor and NoArgsConstructor lombok annotations.
+
+Code Analysis:
+The code provided is well-structured, concise and adheres to best coding practices. The only issue that may arise is if a developer other than the author is not familiar with the lombok library and @Data annotation optimization.
+
+Errors and Security Vulnerabilities:
+No errors or possible security vulnerabilities are present.
+
+Suggested Code Corrections:
+None. The provided code is well-written and clear.
+
+******** CheckoutWizard.js ******** 
+
+// CODE REPORT
+
+This code imports the React library used in the code and defines a function called CheckoutWizard which takes an activeStep parameter to create a div element. The div element has a set of four other divs inside it denoting the checkout steps in a checkout wizard. The divs are then styled depending on the current step of the process, as denoted by the activeStep parameter. This code is straightforward, simple and effective to achieve the desired functionality.
+
+// CODE ANALYSIS
+
+This code is written in the JavaScript programming language, and makes use of the React library imported from the React package. The CheckoutWizard function correctly uses the activeStep parameter to take in the current step of the checkout wizard and then use it to style the div elements as is required. The code also makes use of const variables for the div element instead of writing it directly in the code. This makes the code more optimised, embedding the legibility for future reference.
+
+// ERRORS
+
+No errors exist in the code.
+
+// SECURITY VULNERABILITIES
+
+No security vulnerabilities exist in the code.
+
+// SUGGESTED CORRECTIONS
+
+No corrections are required for the code.
 
 ******** DiscoveryServiceApplication.java ******** 
 
 
 Code Report:
-This code is the main class for a Discovery Service application. It is written in Java and utilizes the SpringBoot framework. The code is well written, as it has a single purpose and is clear and concise. 
+The code snippet provided is a Spring Boot based application with an @SpringBootApplication annotation, which is used to enable the auto-configuration of the application in the container. Additionally, the @EnableEurekaServer annotation is used to enable the Eureka server within this application, which is used as a service discovery mechanism.
 
 Code Analysis:
-This code is an example of a well-crafted main class for an application. It is properly imported, with no unnecessary libraries or imports. The code is also properly annotated to make use of the SpringBoot framework. Additionally, the main method is correctly utilized to run the application.
+The code snippet provided is valid and consists of two annotation declarations that create a valid Spring Boot application and configure it for service discovery. The annotation declarations are valid, and free of syntax errors.
 
-Errors and security vulnerabilities:
-This code does not have any errors or security vulnerabilities.
+Errors & Security Vulnerabilities:
+No errors or security vulnerabilities were detected in the code snippet provided.
 
 Suggested Code Corrections:
-No code corrections are necessary for this code.
+No code corrections are necessary for the code snippet provided.
+
+******** MongoConfig.java ******** 
+
+
+CODE REPORT: 
+This code provides basic configuration for MongoDB within the given package. It enables MongoRepositories and allows for a CommandLineRunner interface that can be used to execute some tasks for data initialization or similar.
+
+CODE ANALYSIS:
+Overall, the code is well structured and provides the necessary configuration for using MongoDB with the given class. However, it is incomplete. No implementation is provided for the CommandLineRunner interface, which is necessary for some tasks.
+
+ERRORS:
+There are no errors in the code itself.
+
+SECURITY VULNERABILITIES:
+There are no obvious security vulnerabilities in this code.
+
+SUGGESTED CODE CORRECTIONS:
+To properly implement the CommandLineRunner interface, the following code should be added to the MongoConfig class: 
+@Bean
+public CommandLineRunner commandLineRunner(CustRepo repo) {
+    return args -> {
+        repo.save(new Customer("John", "Smith"));
+    };
+}
+
+******** CustController.java ******** 
+Code Report:
+
+This code is correct syntax-wise, and the functions have valid arguments. The @Autowired annotations and the @RequestMapping indicate that the functions will be used in a REST API. The @CircuitBreaker annotation is being used to enable circuit breaking for the getUserAddress function, and there is a fallback method in case the circuit breaker is triggered.
+
+Code Analysis:
+
+Overall, the code is well-structured and easy to read. It is clear that the functions are intended to be used by a REST API, and the functions are structured to serve this purpose properly. However, there are some aspects that could be improved upon. Firstly, the naming of the variables could be improved. For example, “custDetailsAddressFallBack” could be given a more descriptive name, such as “userAddressLookupFallback”. Furthermore, functions could be split up into more distinct chunks. For example, the “saveUser” and “getUserAddress” functions could be split into multiple functions for better readability. Libraries, such as Spring Boot and Resilience4j, could also be used to simplify the code.
+
+Errors and Security Vulnerabilities:
+
+No errors or security vulnerabilities were identified in the code.
+
+Suggested Code Corrections:
+
+The following changes could be made to improve the code:
+
+1. Rename variables for improved readability.
+2. Split functions into more distinct chunks for better readability.
+3. Utilise libraries, such as Spring Boot and Resilience4j, to simplify the code.
+
+******** abc.go ******** 
+
+
+// Compare a given member with another member
+func (es *endorserSort) Compare(e1 Peer, e2 Peer) Priority {
+	p1 := es.PrioritySelector.Select(e1)
+	p2 := es.PrioritySelector.Select(e2)
+	return p1.Compare(e1, e2) * p2.Compare(e1, e2)
+}
+
+// SelectionFunc returns a filter implementation that uses the given selectionFunc
+func selectionFunc(sf func(Peer) bool) Filter {
+	return &filterSelector{
+		selectionFunc: sf,
+	}
+}
+
+// FilterSelector is a Filter implementation that uses the given selectionFunc
+type filterSelector struct {
+	selectionFunc func(Peer) bool
+}
+
+func (fs *filterSelector) Filter(endorsers Endorsers) Endorsers {
+	var filtered Endorsers
+	for _, endorser := range endorsers {
+		if !fs.selectionFunc(*endorser) {
+			filtered = append(filtered, endorser)
+		}
+	}
+	return filtered
+}
+
+// PrioritySelector holds priorities for members
+type PrioritySelector interface {
+	// Select returns a given node's priority, as judged by the given node
+	Select(member Peer) Filter
+	// Compare returns the priority for a given node
+	Compare(left Peer, right Peer) Priority
+	// Addresses assigns addresses
+	Addresses() []string
+}
+
+type endorserSort struct {
+	Endorsers        Endorsers
+	PrioritySelector PrioritySelector
+}
+
+// DefaultendorserSelector returns a default endorser selector
+func DefaultendorserSelector() PrioritySelector {
+	return NewPrioritySelector(NoExclusion, NoPriorities, false, &defaultEndorserSelectorConfig{})
+}
+
+// NewPrioritySelector returns the total priority for a given node
+//
+// The base priority of a node is determined according to:
+// - filters (exclusion, eligibility, and require algorithms)
+// - priorities - priorities of given node
+//
+// This priority is then adjusted by shuffling the peers, if randomize is set
+func NewPrioritySelector(filter Filter, priorities Priority, randomize bool, config *defaultEndorserSelectorConfig) PrioritySelector {
+	return &defaultPrioritySelector{
+		filter:       filter,
+		priorities:   priorities,
+		randomize:    randomize,
+		shuffleIndex: -1,
+		config:       config,
+	}
+}
+
+type defaultPrioritySelector struct {
+	filter       Filter
+	priorities   Priority
+	randomize    bool
+	shuffleIndex int
+	config       *defaultEndorserSelectorConfig
+}
+
+// Select returns a given node's priority, as judged by the given node
+func (dps *defaultPrioritySelector) Select(member Peer) Filter {
+	return dps.filter
+}
+
+// Compare returns the priority for a given node
+func (dps *defaultPrioritySelector) Compare(left Peer, right Peer) Priority {
+	return dps.priorities.Compare(left, right)
+}
+
+// Addresses assigns addresses
+func (dps *defaultPrioritySelector) Addresses() []string {
+	var addr []string
+	for _, member := range dps.config.Members() {
+		addr = append(addr, member.Endpoint)
+	}
+	return addr
+}
+
+// defaultEndorserSelectorConfig defines the configuration of the defaultEndorserSelector
+type defaultEndorserSelectorConfig struct {
+	peers        []protoext.ReceivedMessage
+	initiated    bool               // were goroutines initiated?
+	lock         sync.RWMutex       // R/W lock
+	adapter      EndorsementAdapter // adapter
+	channel      string             // The channel we belong to
+	Members      func() Members     // Return the members associated with the channel
+	GossipAlive bool               // Is gossip up ? In other words, do we have connected peers ?
+}
+
+// Send sends a given message to all the peers
+func (des *defaultEndorserSelectorConfig) Send(msg *protoext.SignedGossipMessage, peers ...*ConnectionInfo) {
+	des.lock.RLock()
+	defer des.lock.RUnlock()
+	for _, p := range peers {
+		des.adapter.Send(msg, p)
+	}
+}
+
+// Peers returns all peers
+func (des *defaultEndorserSelectorConfig) Peers() []protoext.ReceivedMessage {
+	des.lock.RLock()
+	defer des.lock.RUnlock()
+	return des.peers
+}
+
+// Suggested Code Corrections:
+
+package discovery
+
+import (
+	"math/rand"
+	"sort"
+	
 
 ******** TrainerController.java ******** 
 
-Code Analysis: 
-The given code provides a rest controller along with beans and proxy calling methods to get information from several services. Annotations have been used to provide circuit breaker and rate limiter technologies.
+Code Report:
+The trainer controller REST api end points are correctly implemented. All endpoints are secured and an appropriate response code is returned based on the request made. Proper Fallback methods have been implemented in case of certain conditions.
 
-Error and Security Vulnerabilities:
-1. There is no input validation for the user input given to the api calls which may cause security vulnerabilities.
-2. The circuit breaker functionality has not been implemented correctly. 
-3. There is no authentication or authorization implemented.
+Code Analysis:
+The code is properly formatted, the naming conventions are followed and the code is optimized.
+
+Errors:
+None.
+
+Security Vulnerabilities:
+None.
 
 Suggested Code Corrections:
-1. Input Validation should be done for the user inputs passed in the api calls which can be implemented using the @Valid annotation.
-2. Implement the circuit breaker using the correct syntax and ensure that the fallback/exception block is correctly handled.
-3. Authentication and Authorization mechanism should be implemented by using spring security or similar frameworks.
+None.
 
 ******** index.js ******** 
 
-// CODE REPORT
+//Code Report:
+//The code provided is a React component for a store page which displays the products for that store. It imports several items which include React, a model for a product, a database, a store, and axios. The page then 
+//uses a map function on the products imported from the database to display the individual ProductItem components. The addToCartHandler function is also included which uses an axios get request to retrieve the number 
+//of items in stock and then adds the item to the cart. 
 
-// The provided code is for a home page for an E-commerce application. It consists of an import statement for the custom component ProductItem, a model for Product, two utility imports, an addToCartHandler and a return statement. The code appears to be syntactically and semantically correct.
+//Code Analysis:
+//The code provided appears to be well structured and organized. The code looks like it is properly indented and it is easy to read. It looks like the code is using modern JavaScript syntax which should help make it more 
+//readable. Additionally, the code has checks built in to ensure that the user can only add an item to the cart if there are items in stock. 
 
-// CODE ANALYSIS
+//Errors & Security Vulnerabilities:
+//There do not appear to be any errors or security vulnerabilities in the code provided. 
 
-// The code is well-structured and easy to read, making it easy to understand the flow of the logic. The import statements import all the necessary code that is needed for the application, such as the component ProductItem, the model for Product, two utility imports and a toaster import.
-
-// ERRORS
-
-// There are no errors in the code.
-
-// SECURITY VULNERABILITIES
-
-// The code does not contain any security vulnerabilities.
-
-// SUGGESTED CODE CORRECTIONS
-
-// No corrections need to be made to the code.
+//Suggested Code Corrections:
+//There are no suggestions for code corrections for the code provided.
 
 ******** temp2.go ******** 
 
 
-// IdemixTokenResponseNet is the response to the /idemix/token request
-type IdemixTokenResponseNet struct {
-	// Base64 encoded token
-	Token string
-	// Version of the token
+// RevocationRequestNet is the request body for the /revoke request
+type RevocationRequestNet struct {
+	// The revoc id of the certificate to be revoked
+	RevokeID string
+	// Reason code for revocation
+	Reason string
+	// Whether to generate a revocation descriptor
+	GenCRL bool
+	// Timestamp in RFC3339 format
+	GenOrgs string
+	// Version of the Unrevoke record.
 	Version string
-	// The server information
-	ServerInfo CAInfoResponseNet
 }
 
+// CODE REPORT:
+// The code provided appears to be syntactically correct and is structured well. However, there are a few issues that must be addressed.
 
-// Code Analysis:
-The code looks structurally solid and well-defined. There seems to be some good adherence to the SOLID principles of good programming.
+// CODE ANALYSIS:
+// There are no errors in the provided code, however there are a few potential issues with the security and validity of the code.
 
-// Code Report:
-The code appears to be functionally correct and robust. The data structure provided should be suitable for representing the components of responses from the protected API.
+// ERRORS:
+// There are no errors in the provided code.
 
-// Errors & Security Vulnerabilities:
-No errors or security vulnerabilities have been identified in the code.
+// SECURITY VULNERABILITIES:
+// 1. The revocation request is using plain-text for the revoc id, reason, and timestamp. This information should be encrypted to protect user data.
 
-// Suggested Code Corrections:
-The code could be improved by adding error-handling for the various API requests - for example, if the CAInfoResponseNet request return an error then it should be checked for and if appropriate, an alternative response should be sent. Additionally, the code should be reviewed for any hard-coded values and corrected as necessary- e.g. if the IdemixTokenVersion1 constant exists in multiple places, it should be moved to a single location with a common name.
+// 2. Encryption should also be used for the CRL generation and the GenOrgs field.
+
+// SUGGESTED CODE CORRECTIONS FOR PACKAGE API:
+// For the RevocationRequestNet struct, modify the RevokeID, Reason, and Timestamp fields to accept a byte array (or other encryption method) for storing the data.
+
+// Also modify the CRL generation and GenOrgs fields to accept a byte array (or other encryption method) for storing the data.
+
+******** DailyWorker.java ******** 
+
+Code Report
+ 
+This code snippet is for a DailyWorker class which is a subclass of Worker. The DailyWorker class does not declare any new fields but does override the Pay method from the parent. 
+
+Code Analysis
+
+The code appears to be functioning correctly. The constructor of the DailyWorker class sets the name and rate fields, and the Pay method correctly returns the daily worker's pay based on the hours worked. 
+
+Errors & Security Vulnerabilities
+
+No errors or security vulnerabilities are present in the code as of now. 
+
+Suggested Code Corrections
+
+No changes or corrections are necessary.
+
+******** Dict.java ******** 
+
+
+Code Analysis:
+The code provided assigns an array to each key of a map stored in the variable dict. The map is printed out to the console by taking in user input from the console and using this input as the keys of the dictionary.
+
+Code Report:
+This code functions as intended, allowing the user to input strings which will return the list of array items associated with the key. 
+
+Errors:
+No errors are present in this code.
+
+Security Vulnerabilities:
+No security vulnerabilities are present in the code.
+
+Suggested Code Corrections:
+No corrections are necessary for this code.
+
+******** SalariedWorker.java ******** 
+
+Code Report
+The SalariedWorker class from the package com.kartik.worker implements the Worker abstract class and provides an overriden Pay method. The constructor accepts a name and rate, and the Pay() method returns the rate multiplied by the hours divided by 7.
+
+Code Analysis
+There are no errors or security vulnerabilities in this code.
+
+Suggested Code Corrections
+None.
+
+******** Worker.java ******** 
+
+Code Report
+This code snippet instantiates a class called Worker and declares two protected fields: name, a string, and rate, an integer. The class includes a default Pay method that takes in an argument of hours and returns 0.
+
+Code Analysis
+This code appears to be the beginning of a class that should store parameters for an employee such as name and rate of pay, and a method for calculating the pay for a given number of hours. Since these fields are declared as protected, they can be accessed from within any subclass of this class.
+
+Errors
+There is no error in the code itself but it is incomplete. The Pay method does not take into account the value of rate, and will always return 0 regardless of how many hours the employee has worked. 
+
+Security Vulnerabilities
+Since this code does not include any methods for updating the protected fields, it does not create any security vulnerabilties.
+
+Suggested Code Corrections
+The Pay method should be modified to calculate and return the total pay, based on the number of hours worked and the employee's rate:
+
+public int Pay(int hours) {
+    return rate * hours;
+}
 
 ******** temp.go ******** 
 
 
-type EnrollmentResponse struct {
-	Cert string `json:"cert"`
-	ServerInfo *ServerInfo `json:"server_info,omitempty"`
+func (er *EnrollmentRequest) String() string {
+	return util.StructToString(er)
 }
 
-type ReenrollmentRequest struct {
-	CAName string `json:"caname,omitempty" skip:"true"`
-	AttrReqs []*AttributeRequest `json:"attr_reqs,omitempty"`
-	Profile string `json:"profile,omitempty" help:"Name of the signing profile to use in issuing the renewed certificate"`
-	Label string `json:"label,omitempty" help:"Label to use in HSM operations"`
-	CSR *CSRInfo `json:"csr,omitempty" skip:"true"`
-}
-
-type ReenrollmentResponse struct {
-	Cert string `json:"cert"`
-	ServerInfo *ServerInfo `json:"server_info,omitempty"`
-}
-
-type ModificationRequest struct {
-	CAName string `json:"caname,omitempty" skip:"true"`
-	Name string `json:"name" help:"Unique name of the identity whose modification is being requested"`
-	Type string `json:"type" def:"user" help:"Type of identity being modified (e.g. 'peer, app, user')"`
-	Affiliation string `json:"affiliation,omitempty" help:"The identity's affiliation"`
-	Attributes []Attribute `json:"attrs,omitempty"`
-	Secret string `json:"secret,omitempty" mask:"password" help:"The enrollment secret for the identity being registered"`
-}
-
-// AttributeRequest defines the name and value of an attribute to be added during
-// enrollment
+// AttributeRequest supplies a request for an attribute
 type AttributeRequest struct {
-	Name     string   `json:"name"`
-	Value    string   `json:"value"`
-	ECert    bool     `json:"ecert" help:"Specifies that the attribute will be included in the enrollment certificate"`
+	Name string `json:"name" help:"Name of attribute"`
+	Optional bool `json:"optional,omitempty" help:"Optional or required attribute"`
 }
 
-// Attribute defines a name value pair for an attribute
+func (ar *AttributeRequest) String() string {
+	return util.StructToString(ar)
+}
+
+// Attribute supplies an attribute name and value
 type Attribute struct {
-	Name  string `json:"name"`
-	Value string `json:"value"`
+	Name   string `json:"name"`
+	Value  string `json:"value"`
+	ECert  bool   `json:"ecert,omitempty"`
 }
 
-// SRVInfo contains the identities revocation status, revocation or suspension time, expiry time
-type SRVInfo struct {
-	Status           string        `json:"status"`
-	RevocationTime   time.Time     `json:"revocation_time,omitempty"`
-	RevocationReason int           `json:"revocation_reason,omitempty"`
-	ExpireTime       util.Time     `json:"expire_time,omitempty"`
-	GenCRL           bool          `json:"gencrl,omitempty"`
+// IdentityResponse contains information about an enrolled identity
+type IdentityResponse struct {
+	ID            string               `json:"id"`
+	Type          string               `json:"type"`
+	Affiliation   string               `json:"affiliation"`
+	Attributes    []Attribute          `json:"attrs"`
+	MaxEnrollments int                  `json:"max_enrollments"`
+	CAName        string               `json:"caname"`
 }
 
-// CSRInfo contains the certificate CSR request
-type CSRInfo struct {
-	CN           string             `json:"CN"`
-	Names        []csr.Name         `json:"names,omitempty"`
-	Hosts        []string           `json:"hosts,omitempty"`
-	KeyRequest   *csr.BasicKeyRequest`json:"keyrequest,omitempty"`
-	CA           *csr.CAConfig      `json:"ca,omitempty"`
-	SerialNumber string             `json:"serialnumber,omitempty"`
+func (ir *IdentityResponse) String() string {
+	return util.StructToString(ir)
 }
 
-// ErrorResponse defines the JSON response returned when an error occurs
-type ErrorResponse struct {
-	Message        string `json:"error"`
-	HTTPStatusCode int    `json:"status"`
+// GetRegistrarResponse supplies the enroll ID and enroll secret
+// of a registrar
+type GetRegistrarResponse struct {
+	ID        string `json:"id"`
+	Secret    string `json:"secret"`
+	MaxEnrollments int `json:"max_enrollments"`
 }
+
+ CODE REPORT:
+The code appears to be coded accurately and meets coding conventions. There are no issues with code analysis.
+
+ERRORS:
+No errors were detected within the code.
+
+SECURITY VULNERABILITIES:
+No security vulnerabilities detected within the code.
+
+SUGGESTED CODE CORRECTIONS:
+No code corrections were necessary.
+
+******** after.js ******** 
+
+//Code Report:
+//The above code is a React component that implements getServerSideProps for fetching products from the database and renders a ProductItem component for each product. This code does not contain any errors, however there are security vulnerabilities and code optimization needed. 
+
+//Code Analysis:
+//The code is using useContext and hooks which is a React best practice. The code makes use of the Store context to keep the state of the cart in order to add items when users click the "add to cart" button.
+
+//Errors:
+//No errors are present in this code.
+
+//Security Vulnerabilities:
+//This code contains a potential XSS security vulnerability due to the lack of input validation. All user submitted values should be checked to ensure they contain no malicious code.
+
+//Suggested Code Corrections:
+//In order to add input validation to the code, the following code should be added at the beginning of the addToCartHandler function:
+
+const sanitizedProduct = db.sanitizeInput(product);
+if (!sanitizedProduct) return;
+const { data } = await axios.get(`/api/product/${sanitizedProduct._id}`);
+if (data.countInStock < quantity) {
+	...
+
+******** before.js ******** 
+
+// Code Report and Analysis:
 
 /*
-Code Report:
-The above code appears to be valid Go code. There are no visible security vulnerabilities. 
+This code is a basic implementation of the Next.js framework. It allows users to create a new Session 
+Provider and Store Provider with the Component.auth method. The useRouter and useSession methods allow 
+for navigation and session validation. This code is written correctly and is free from errors and security
+vulnerabilities.
 
-Code Analysis & Errors:
-There are no visible errors or code analysis statement issues in this code. 
+Suggested Code Corrections: None.
+*/
 
-Suggested Code Corrections:
-No corrections are suggested at this time.
+******** new.js ******** 
+
+//Code Report
+//This code is a functional component written in React with the use of Next.js framework that allows a user to log into the website. The import Layout from '@/components/Layout'; imports the layout file that includes the components specified in the path '@/components/Layout'. The Link import from 'next/link' allows a user create a link on a website. The React import allows a user to use JSX in the code. The useForm from 'react-hook-form' allows a user to create forms and store the data submitted through them. SignIn from 'next-auth/react' allows a user to create an authentication method. The toast from 'react-toastify' allows a user to create toasts for notifications. The useRouter from 'next/router' allows a user to access the route information from the Next.js router. The getError from '@/utils/error' gets an error object from the given parameters. The handleSubmit from the useForm hook allows a user to access the data submitted through a form. The register from the useForm hook allows a user to register a custom validator or apply rules on the form field. Provide suggested code corrections for import Layout from '@/components/Layout';
+
+//Suggested Code Correction
+import Layout from '@/components/Layout';
 
 ******** setupSocket.ts ******** 
 
-//CODE REPORT
-//This code provides a SetupSocket class that is used to handle socket communication and set up connection between the server and its clients. It stores information about the users, the rooms they've joined, the current room they are in, and the chair statuses. It also has functions to handle bid status, video status, and chat. 
+// Code Report
+This code segment appears to be a Socket.io implementation for a web application. This code is connected to both a server as well as a client and functions as a bid barrier and auction system for digital goods. There are many functions that have been implemented such as disconnect, reconect, newmodel, getCurrentModelsState, clientBid, nftUpdate, biddingStatus and dynamic_item. 
 
-//CODE ANALYSIS
-//This code is written in TypeScript and imports various modules related to socket.io, http, and timers. The SetupSocket class that is implemented in this code uses these imports to create a connection between the server and its clients, and also stores the required information in variables that are necessary for the clients to interact with the server. 
+// Code Analysis
+This code appears to be valid and implemented properly. However, there are some suspected security vulnerabilities which are mentioned below. The timerFunc setTimeout-function is also missing an arrow-function and is thus not properly scoped.
 
-//ERRORS
-//There are no errors present in this code.
+// Errors
+The timerFunc setTimeout-function is missing an arrow-function and is thus not properly scoped.
 
-//SECURITY VULNERABILITIES
-//The code does not have any authentication implementations, so there is a potential security vulnerability with any requests from unauthenticated clients. Additionally, it would be beneficial to add a function to detect malicious clients who send invalid data. 
+// Security Vulnerabilities
+There are no universal user-identifiers for clients, meaning that after a reconnect, a user may potentially not be validated as authentic due to their identifiers not matching stored records. 
 
-//SUGGESTED CODE CORRECTIONS
-//Authentication should be added to this code. The authentication can be done by adding a function that takes the user's credentials such as username, password, and token, and then checks the credentials against a database containing valid client information. Additionally, a function should be added that checks for any malicious clients or requests containing invalid or malicious data. 
+// Suggested Code Corrections
+The timerFunc setTimeout-function should be replaced with an arrow-function in order to properly scope it.
 
-//Also, the following changes should be made to improve efficiency and maintainability: 
-//1. The class variables should be declared as private so that they cannot be accessed from outside the class. 
-//2. The class variables should be properly initialized and properly assigned values. 
-//3. The timerFunc variable should be declared as private because it is not needed outside the class. 
-//4. The disconnect event handler should delete the user's data from the clients map. 
-//5. The updateUser event handler should send the updated values to all the other connected clients. 
-//6. The function emitBidStatus() should be implemented so that the bid status can be updated easily. 
-//7. The clientBid event handler should reset the highestBidrSID value if the highest bid is no longer equal to the bid sent by the client.
-//8. The itemChange event handler should also reset the highestBid variable.
+// Modified Code
+let timerFunc = setTimeout(() => {
+  console.log("time starts")
+},20000);
+
+******** bcd.go ******** 
+
+
+// shrinkMemory shrinks the MemoizeSigner's memory to maxEntries
+func (ms *MemoizeSigner) shrinkMemory() {
+	if ms.maxEntries == 0 {
+		return
+	}
+	ms.Lock()
+	defer ms.Unlock()
+	if len(ms.memory) > (int)(ms.maxEntries) {
+		for s := range ms.memory {
+			delete(ms.memory, s)
+			if len(ms.memory) == (int)(ms.maxEntries) {
+				break
+			}
+		}
+	}
+}
+
+// Code report:
+// This is a code report for the MemoizeSigner() method found in the discovery package. The method is used by the signer to store previously signed messages and improve efficiency. 
+
+// Code Analysis:
+// The MemoizeSigner() method implements a signature memoizer which stores pre-calculated signatures in a map structure. The maxEntries field is used to set the limit for how many messages can be stored in the memoization map. The lookup, memorize and shrinkMemory functions are helper functions that facilitate operations within the MemoizeSigner().
+
+// Errors:
+// There are no errors found within the MemoizeSigner() method. 
+
+// Security Vulnerabilities:
+// There are no possible security vulnerabilities found within this code. 
+
+// Suggested Code Corrections:
+// No code corrections are suggested for this method.
 
 ******** DropdownLink.js ******** 
 
-// Code Report
-The DropdownLink function provided is valid React.js code that is intended to be used for providing a link for user navigation. 
+//Code Report
+//This code snippet is a function component which creates a link for a dropdown menu import from the Next/Link package. This component takes two props passed in, one is the href which contains the necessary URL location and the second is children, which will contain the link text. 
 
-// Code Analysis
-The code does not have any errors and it allows for the Link component from 'next/link' to be imported for use. 
+//Code Analysis
+//The code is well organized and easy to follow. The syntax is correct and the code functions without errors. 
 
-// Errors and Security Vulnerabilities
-There are no errors or security vulnerabilities present in the code provided. 
+//Errors & Security Vulnerabilities
+//As is, there are no errors or security vulnerabilities in this code. 
 
-// Suggested Code Corrections
-No corrections are needed for the code provided.
+//Suggested Code Corrections
+//No code corrections are necessary.
 
 ******** Product.js ******** 
 
+//Code Report
+
+The code provided allows a user to define a product schema using Mongoose. The code allows the user to define objects using various types (String, Number, etc.), as well as to set various attributes as required. The code also sets a timestamp in order to store when the product was created. The code uses the mongoose.model() method to create a model from the productSchema. The code also exports the model for use elsewhere. 
+
+//Code Analysis 
+The code provided does not contain any obvious errors. It is also secure as it does not expose any sensitive information or utilize user input without validation. 
+
+//Suggested Code Corrections
+No suggested code corrections are needed.
+
+******** ProductItem.js ******** 
+
+// Code Report 
+This snippet of code appears to be a React component used to display product(s) on a page or web application. The code appears to be well written and easily readable.
+
+// Code Analysis
+The code snippet is written in the React library and is a functional component. The purpose of this component is to display a product and provide a button with an 'add to cart' function. The component also uses the Next.js library with Link and Image components, which provides an alternative to React Router for routing.
+
+// Errors
+There do not appear to be any errors in the code snippet.
+
+// Security Vulnerabilities
+There do not appear to be any security vulnerabilities in the code snippet.
+
+// Suggested Corrections
+None - The provided code snippet appears to be correctly written and up to standards.
+
+******** CustomerDetailsProxy.java ******** 
+
+
+
 Code Report:
-This code provides an example of creating a product schema in Mongoose. It creates a schema where a product name, slug, category, image, price, brand, rating, numReviews, countInStock, and description are all required. It also creates a timestamp for when each product is added or updated. The code then creates a model called 'Product', and exports it so that it can be used elsewhere. 
+
+The code provided is missing a few critical pieces of a full Feign Client configuration. The @FeignClient annotation is missing the required URL parameter. Without a URL parameter, the Feign Client will not be able to execute any requests. Additionally, the GetMapping annotation is missing a value parameter. The value parameter specified the API endpoint to connect to. Without this parameter, the Feign Client will not know which API endpoint to connect to. 
+
+Code Analysis: 
+
+The provided code is missing required elements of a Feign Client configuration. Without these missing parameters, the Feign Client will not be able to connect to its API endpoint. 
+
+Errors & Security Vulnerabilities: 
+
+Without the necessary parameters and configuration, the Feign Client will not be able to send any API requests. This will result in the client not being able to receive the data it needs. Additionally, failing to specify an API endpoint and URL parameters can create a potential security vulnerability, as unspecified endpoints and URLs can potentially expose sensitive information. 
+
+Suggested Code Corrections: 
+
+The suggested corrections to the code would be to add the required parameters and configuration to the Feign Client. Specifically, add a URL parameter and a value parameter to the @FeignClient and @GetMapping annotations, respectively. 
+
+@FeignClient(name="CUSTOMER-DETAILS", url="https://example-url.com/")
+public interface CustomerDetailsProxy {
+	@GetMapping(value="/customer-details/{name}")
+	public String getCustAddress( @PathVariable String name);
+}
+
+******** CustRepo.java ******** 
+
+Code Report:
+
+This code snippet is a MongoRepository class representing a collection of customers. It is used to query the database for customer records based on certain conditions.
 
 Code Analysis:
-This code is generally well written and efficient in its implementation. However, there is a typo on line 9, where 'tpye' should be 'type'.
+
+The code appears to be valid, but there are a few potential issues which should be addressed. Firstly, the @Query annotation does not appear to be correct, as the "dob" field is specified twice. Furthermore, the date parameters should be in ISO-8601 format, as this is the standard format for Mongo queries. Finally, the findByName method is not using an indexed query, which could lead to poor performance.
+
+Errors and Security Vulnerabilities:
+
+There are no errors or security vulnerabilities in the code provided.
+
+Suggested Code Corrections:
+
+The @Query annotation should be modified to use the $gte and $lte operators to query for documents with a dob field greater than or equal to the first parameter and less than or equal to the second. The findByName method should also use an indexed query to ensure the best possible performance.
+
+@Query("{'dob' : {$gte : ?0}, 'dob' : {$lte : ?0}}")	
+public List<Customer> findBetweenDob(Date dob1, Date dob2);
+
+public List<Customer> findByName(@Indexed String name);
+
+******** CustService.java ******** 
+
+Code Analysis:
+
+This service class provides all CRUD operations which allows a user to insert, update, delete, and also retrieve all customers from the database. The code looks clean and commented to explain different methods.
+
+Errors and Security Vulnerabilities:
+
+This code doesn't appear to contain any errors or security vulnerabilities.
+
+Suggested Code Corrections:
+
+None.
+
+******** auth.js ******** 
+
+//Code Report
+This code report will cover errors, security vulnerabilities, and suggested corrections for the "import jwt from 'jsonwebtoken'" line of code, found in the export statement. 
+
+Errors:
+The code seems to be properly formatted, however, the "import jwt from 'jsonwebtoken'" line of code should be changed from "import jwt from 'jsonwebtoken'" to "const jwt = require('jsonwebtoken')". This is because require should be used when importing NPM packages, not the import keyword. 
+Security Vulnerabilities:
+The line of code "const { authorization } = req.headers;" leaves the code vulnerable to header manipulation. This line of code should be changed to "const token = req.headers.authorization". Suggested Corrections:
+
+•	Change the "import jwt from 'jsonwebtoken'" line of code to "const jwt = require('jsonwebtoken')".
+•	Change the line "const { authorization } = req.headers;" to "const token = req.headers.authorization".
+
+******** data.js ******** 
+
+//Code Report
+//This code example is setting up a database for a clothing store. It contains two sets of data, users and products. In the users set of data, the password is being hashed using bcrypt.
+
+//Code Analysis
+//The code looks relatively clean and well organized. The bcrypt hashing is a good security measure to ensure user passwords are safe.
+
+//Errors
+//No errors were detected in this code.
+
+//Security Vulnerabilities
+//No security vulnerabilities were detected in this code.
+
+//Suggested Code Corrections
+//No code corrections are needed.
+
+******** db.js ******** 
+
+/*
+Code Report:
+
+The provided code is written using asynchronous code, making it efficient and reliable. The code includes error handling and checks for existing connections and closes them at the start of a new connection. The code also includes environment variables and other security measures to protect the data.
+
+Code Analysis:
+
+The code analysis reveals that the provided code is missing the import statement for Mongoose. Without this import, the code will not be able to connect to the MongoDB database and will instead fail with an error.
+
+Errors and Security Vulnerabilities:
+
+The code is missing an import statement for mongoose which will cause an error upon connection. Additionally, the code does not include any input validation, which could leave the connection vulnerable to malicious input.
+
+Suggested Code Corrections: 
+
+import mongoose from 'mongoose';
+Add input validation
+Improve error handling
+
+******** error.js ******** 
+
+//Code Report
+It appears this file contains a handler for errors related to data access. The getError function attempts to determine whether a provided error is related to a response or some other data source, and then parses the message accordingly. The onError function appears to handle errors related to database disconnection and responds accordingly.
+
+//Code Analysis
+This code appears to function correctly and is generally well formatted and organized. It could be improved to be more clear by providing descriptive variable names, as well as using an object to encapsulate the error messages for more consistent and detailed parsing.
+
+//Errors
+This code does not appear to contain any errors.
+
+//Security Vulnerabilities
+This code does not appear to contain any security vulnerabilities.
+
+//Suggested Code Corrections
+The code could be improved by adding a try/catch block around the getError function to ensure any errors are properly caught and handled, as well as by adding a comment describing the purpose of the code. Additionally, an object could be used to encapsulate the error messages for more consistent and detailed parsing.  e.g.
+
+const errorMessages = {
+  response: err.response.data.message
+  message: err.message
+}
+
+const getError = (err) => {
+  try {
+      return errorMessages[err]
+  }
+  catch (err) {
+      console.log("Error: ", err.toString())
+  }
+}
+
+******** flex.js ******** 
+
+//Code Report
+
+The code provided appears to be mostly functioning as intended, with the code returning a page if the product requested is “not found.” However, there are several areas for improvement with the code. 
+
+//Code Analysis 
+The code does not seem to be dealing with any potential errors or exceptions that could arise from axios or from the await db.connect() methods. Additionally, the code does not appear to utilize any form of authentication or authorization for accessing the data received from axios.  Lastly, the code does not adhere to best coding practices such as utilizing constants for data that will be used throughout the code. 
+
+//Errors and Security Vulnerabilities 
+The code does not appear to handle any potential vulnerabilities as noted above. Without proper exception handling and authorization/authentication in place, the code has potential security vulnerabilities. Additionally, without proper exception handling and coding conventions, it is likely that the code is prone to errors. 
+
+//Suggested Code Corrections 
+To handle potential exceptions, try/catch blocks should be used when utilizing the await db.connect() and axios methods. Additionally, to help prevent security vulnerabilities, authorization/authentication should be implemented when accessing data sources. Lastly, constants should be used for any data that will be used for multiple times throughout the code.
+
+******** nef.js ******** 
+
+Code Report:
+This code is a handler for an HTTP request that retrieves the product specified by the query parameter "id". It begins by connecting the database and then using the Product model to retrieve the requested product object from the database. Finally, the product object is sent back in the response.
+
+Code Analysis:
+This code is written using standard JavaScript best practices, such as using const for constants and async functions for asynchronous operations. It is also using a provided db utility to abstract away database connection and disconnection manager, which is a good practice for ensuring reliable database access.
 
 Errors and Security Vulnerabilities:
 There are no errors or security vulnerabilities in this code.
 
 Suggested Code Corrections:
-On line 9, the word 'tpye' should be changed to 'type'. 
+No code corrections are necessary.
 
-Change: 
-brand: { tpye: String, required: true },
+******** Store.js ******** 
 
-To: 
-brand: { type: String, required: true },
+CODE REPORT:
+This code sets up a reducer that is used to manage cookies. The code is fairly well written, with good formatting and clear naming conventions. 
 
-******** ProductItem.js ******** 
+CODE ANALYSIS:
+There are no noticeable errors in the code. However, it is possible that some of the cookie data may be prone to manipulation, which could lead to security vulnerabilities.
 
-Code Report
-The code is syntactically correct and understandable. The code is written efficiently and can run as expected.
+SECURITY VUSNERABILITIES:
+The cookie data in this code is not properly secured, making it possible for the cookies to be manipulated by a malicious user. If the data is sensitive, it is important to ensure that it is encrypted before being stored in a cookie.
 
-Code Analysis
-The code above is written as a functional React component. It uses the Link component to link the clickable page elements to the product page; it links the product image and name to the product page and includes a button for adding the product to the cart.
+SUGGESTED CODE CORRECTIONS:
+To prevent tampering of the cookie data, it should be encrypted before setting it in the cookie. One way to do this is to make use of the Node.js 'Crypto' module. The following example shows how the encryption could be implemented:
 
-Errors
-The code does not contain any errors.
+const crypto = require('crypto');
 
-Security Vulnerabilities
-No security vulnerabilities have been identified in the code.
+// Get the cookie data
+const cookieData = Cookies.get('data');
 
-Suggested Code Corrections
-N/A
+// Encrypt the cookie data
+const cipher = crypto.createCipher('aes256', 'password');
+let encrypted = cipher.update(cookieData, 'utf8', 'hex');
+encrypted += cipher.final('hex');
+
+// Set the encrypted cookie
+Cookies.set('data', encrypted);
+
+******** temp3.go ******** 
+
+
+// Code Report
+//
+// The code in this file appears to be syntactically correct and is properly commented. It meets the spec in regards to the
+// interfaces and types declared by the program. No logical errors were found upon inspection.
+
+// Code Analysis
+//
+// The code in this file appears to have been written to fulfill a specific purpose. It is clear that the code is designed 
+// to provide an interface for gathering responses from the discovery service. There are several helper functions that are 
+// used to accomplish this task, such as the Signer and Dialer functions which appear to have been designed to simplify 
+// the process of signing and dialing in to the discovery service. 
+
+// Errors and Security Vulnerabilities
+//
+// No errors or security vulnerabilities were discovered in the supplied code.
+
+// Suggested Code Corrections
+//
+// No corrections are necessary for the supplied code.
