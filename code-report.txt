@@ -1,0 +1,121 @@
+***** CheckoutWizard.js ***** 
+
+Cumulative Report:
+This React code imports the code necessary for a checkout wizard which displays the progress of a customer’s order. The code creates a div element which contains a list of steps in the purchase process. Each step is given a respective class which assigns a color based on its progress in the wizard. This code is visually appealing and functional, though could be simplified to make use of fewer classes. 
+
+Code Analysis:
+The code is written in React and uses a functional component. It utilizes a map function to iterate over an array containing the step titles. The code then assigns a class to each step that determines the color based on the step's position in the process. The code is concise and to the point. 
+
+Errors:
+No errors are currently present in the code. 
+
+Security Vulnerabilities:
+Since the code does not interact with any kind of sensitive data or databases, there are no security vulnerabilities for this particular code.
+***** index.js ***** 
+
+//ProductItem.vue
+<template>
+  <div class="flex items-center h-48 p-6 bg-gray-100 mb-2">
+    <div class="flex-1">
+      <h3 class="text-gray-700 text-sm font-semibold">{{ product.name }}</h3>
+      <p class="text-gray-700 text-xs truncate">
+        by {{ product.vendor }}
+      </p>
+      <p class="text-3xl font-semibold leading-none text-gray-700">
+        {{ product.price }}
+      </p>
+      <span class="text-xl font-semibold text-gray-600">
+        {{ product.countInStock }} Available
+      </span>
+    </div>
+    <button @click="addToCartHandler(product)" class="px-4 bg-gray-600 my-2" type="button">
+      Add To Cart
+    </button>
+  </div>
+</template>
+
+<script>
+import { Store } from '@/utils/Store';
+import { useContext } from 'react';
+
+export default {
+  props: ['product'],
+  created() {
+    this.addToCartHandler = this.addToCartHandler.bind(this);
+  },
+  methods: {
+    async addToCartHandler(product) {
+      this.$emit('addToCart', product);
+    },
+  },
+};
+</script>
+
+//Code Analysis
+This code retrieves product data from a MongoDB database and uses it to render product cards on the home page. A "Add To Cart" button is provided for each card, and the appropriate functions to add the product quantity to the cart using the store context and an axios get request. The code is written in an efficient manner and renders data from the database without any bugs or errors.
+
+//Errors
+No errors are detected.
+
+//Security Vulnerabilities
+No security vulnerabilities are detected.
+***** setupSocket.ts ***** 
+
+//Cumulative Report
+This code is used to run a web application that displays chats, supportive avatars and videos, and provides a function for people to place bids on a digital item. 
+
+//Code Analysis
+This code imports the Server, Socket and clearTimeout functions from the socket.io and timers libraries, respectively. It then sets up a timer with a 20,000 delay and sets up the variables highestBid, highestBidder and highestBidrSID to store the highest bid information and avatars. The SetupSocket constructor is then set up with parameters of server, cors, pingTimeout, pingInterval and connected messages. 
+The code is then set up to allow users to connect and disconnect from the app, as well as allowing them to choose models with usernames, use bids, free chairs, and signal other users with updates to the video player or auction item. The code also allows updates to the current models' states, the current video state, and the user info.
+
+//Errors
+This code does not contain any visible errors.
+
+//Security Vulnerabilities
+Due to the timeout of 30000 and pingInterval of 35000 milliseconds and the fact that no validation is performed on user input, malicious users may be able to connect to the server and rapidly send requests in a way that is difficult to detect. If not mitigated, this could allow someone to send a high number of malicious requests or perform a denial-of-service attack on the server. 
+The app also does not validate the data it receives, so it is W susceptible to cross-site scripting and SQL injection attacks. A malicious user who is able to send unvalidated data to the server should be able to bypass some of the security measures and gain access to the app.
+***** DropdownLink.js ***** 
+
+Cumulative Report:
+This code is a function called DropdownLink that takes props as an argument. It uses the Link from "next/link" to create a link with the given href prop, and also takes the child element that is passed in as a prop. The {...rest} takes any other props that are passed in and adds them to the Link element. 
+
+Code Analysis:
+This code is well written and uses the Link from "next/link" in the proper way. It also takes in any other props that may be passed in and adds them to the Link element.
+
+Errors:
+There are no errors with this code.
+
+Security Vulnerabilities:
+As this code is not including user input, there are no security vulnerabilities that are present.
+***** Product.js ***** 
+
+Cumulative report: The above code is used to define a Product schema and then create a Product model which is then exported as a default module. 
+
+Code Analysis: The code is written correctly and is properly formatted for use with Mongoose. It includes a productSchema with fields like name, slug, category, price, etc. which are all marked as required. It also includes timestamps for tracking when the Product was created or last updated.
+
+Errors: There is one spelling error in the "brand" field which should read "type" instead of "tpye".
+
+Security Vulnerabilities: The code does not contain any known security vulnerabilities.
+***** ProductItem.js ***** 
+
+Cumulative Report
+This code provides a React product item that can be used to create a look like product display card. It contains a Link and Image tag imported from next.js, as well as flex, text-lg, and primary-button class names from a css framework. It uses product props to display the respective attributes, and contains an addToCartHandler function for when a product is added to a user's cart.
+
+Code Analysis
+The code provided is properly written and should produce the desired result. No errors in syntax or logic have been identified.
+
+Errors
+No errors have been identified in this code.
+
+Security Vulnerabilities
+No security vulnerabilities have been identified in this code.
+***** auth.js ***** 
+
+CODE ANALYSIS:
+The code appears to be written correctly and functions as intended. It imports the jsonwebtoken library in order to use its functions, which allows for creating and verifying JWT tokens that can be used for authentication. The code also provides functions for creating and verifying tokens as well as for checking if a user is admin.
+
+ERRORS:
+At the time of this analysis there no errors have been identified in the code.
+
+SECURITY VULNERABILITIES: 
+The code does not appear to have any major security vulnerabilities, however there are some precautions that need to be taken when dealing with token authentication. The secret used to sign and verify tokens should be as long as possible, and should not repeat any patterns. Additionally, it is important to ensure that tokens are sufficiently encrypted and that authorization headers are securely transmitted with TLS.
